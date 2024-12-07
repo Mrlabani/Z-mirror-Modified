@@ -11,7 +11,7 @@ from bot.helper.telegram_helper.message_utils import sendMessage
 
 
 async def authorize(_, message):
-    sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEZAudl86trytcEPXnGRbzw84OoSAqQwgACQgkAAo6nuVSdzxsdR3ZptjQE")
+    sticker_message = await message.reply_sticker("CAACAgQAAxkBAAIBTWdUfA9uNcFCC8fFRDMRoZaHicRaAAIZDQACdmcgUfTj7QQtmo08NgQ")
     await asyncio.sleep(2)
     await sticker_message.delete()
     msg = message.text.split()
