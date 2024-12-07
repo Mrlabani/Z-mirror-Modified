@@ -31,7 +31,7 @@ from .modules import (anonymous, authorize, bot_settings, cancel_mirror,
 
 
 async def start(_, message):
-    sticker_message = await message.reply_sticker("CAACAgIAAxkBAAEXyPRledQ6luKt1QABSPMPi2s4rgH3xMUAAmkdAALpI4hJ8xCGgSybQv8zBA")
+    sticker_message = await message.reply_sticker("CAACAgEAAxkBAAIBU2dUfNJrGMgDNgsuB2P_IlVl-IBSAAIsBQACr-gpRMy8IUqGfApHNgQ")
     await asyncio.sleep(2)
     await sticker_message.delete()
     if len(message.command) > 1 and len(message.command[1]) == 36:
@@ -61,11 +61,11 @@ async def start(_, message):
     elif config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
         start_string = 'Bot Started.\n' \
                        'Now I will send all of your stuffs here.\n' \
-                       'Use me at: @JetMirror \n' \
+                       'Use me at: @noob_je \n' \
                        'Repo: @Z_Mirror'
     elif not config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
         start_string = 'Sorry, you cannot use me here!\n' \
-                       'Join: @JetMirror to use me.\n' \
+                       'Join: @noob_je to use me.\n' \
                        'Thank You.\n' \
                        'Repo: @Z_Mirror'
     else:
@@ -234,7 +234,7 @@ async def main():
     bot.add_handler(MessageHandler(restart, filters=command(BotCommands.RestartCommand) & CustomFilters.sudo))
     bot.add_handler(MessageHandler(ping,    filters=command(BotCommands.PingCommand)    & CustomFilters.authorized))
     bot.add_handler(MessageHandler(bot_help,filters=command(BotCommands.HelpCommand)    & CustomFilters.authorized))
-    LOGGER.info("🚀️ Jet Bot Started Successfully!")
+    LOGGER.info("🚀️ noob Bot Started Successfully!")
     signal(SIGINT, exit_clean_up)
 
 bot.loop.run_until_complete(main())
