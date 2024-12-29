@@ -6,7 +6,7 @@ RUN chmod 777 /usr/src/app
 RUN python3 -m venv zee_env
 
 COPY requirements.txt .
-RUN mltbenv/bin/pip install --no-cache-dir -r requirements.txt
+RUN zee_env/bin/pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
